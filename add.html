@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div class="maths">
     <div class="qu">
         <span id="numOne"></span> + <span id="numTwo"></span> =
     </div>
@@ -17,9 +18,10 @@
         <input type="text" id="answer" name="answer">
         <button type="submit" id="submitBtn">Submit</button>
     </form>
-<button onclick=window.location.reload();>next</button>
+<button onclick=window.location.reload();>Next</button>
     <div class="mark">
 
+    </div>
     </div>
 </body>
 <script>
@@ -44,11 +46,11 @@
 
         if (answer == total) {
             console.log("answer is correct");
-            marking.innerHTML = "✅"
+            marking.innerHTML = "✅ Correct"
         }
         else {
             console.log("not right");
-            marking.innerHTML = "❌"
+            marking.innerHTML = "❌ Wrong"
         }
     })
 
