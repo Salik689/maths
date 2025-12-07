@@ -1,0 +1,19 @@
+body,html{
+    width: 100vw;
+    overflow-x: hidden;
+}
+.mark{
+    font-size: 200px;
+}
+
+.qu{
+    text-align: center;
+    
+}
+form{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+}

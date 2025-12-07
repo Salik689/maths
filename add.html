@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add | +</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="qu">
+        <span id="numOne"></span> + <span id="numTwo"></span> =
+    </div>
+    <form>
+        <label for="answer">Enter your answer:</label>
+        <input type="text" id="answer" name="answer">
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+<button onclick=window.location.reload();>next</button>
+    <div class="mark">
+
+    </div>
+</body>
+<script>
+
+    let marking = document.getElementsByClassName("mark")[0]
+
+    let randNum1 = Math.floor(Math.random() * 10)
+    num_one = document.getElementById("numOne")
+
+    let randNum2 = Math.floor(Math.random() * 10)
+    num_two = document.getElementById("numTwo")
+
+
+    num_one.innerHTML = randNum1;
+    num_two.innerHTML = randNum2
+
+    let submitBtn = document.getElementById("submitBtn").addEventListener("click", function (e) {
+        e.preventDefault()
+        answer = document.getElementById("answer").value
+        total = (randNum1 + randNum2)
+
+
+        if (answer == total) {
+            console.log("answer is correct");
+            marking.innerHTML = "✅"
+        }
+        else {
+            console.log("not right");
+            marking.innerHTML = "❌"
+        }
+    })
+
+
+</script>
+
+</html>
